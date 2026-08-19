@@ -10,9 +10,12 @@ public class exer3 {
         System.out.println("digite um numero: ");
         int num = input.nextInt();
 
-        for (int i=0;i<20;i++)
-        {
-            num++;
-        }
+        im20num(num);
+
     }
+        public static void im20num(int num) {
+            for (int i = num; i <= num + 20; i++) {
+                System.out.print(i+" ");
+            }
+        }
 }
