@@ -11,10 +11,12 @@ public class exer8 {
         System.out.println("p3:");
         int num3;
 
+
+
     }
-        public static void somarnum ( int num1, int num2, int num3){
-
-
+        public static int somarnum ( int num1, int num2, int num3){
+        double soma = num1 + num2 + num3;
+        return soma;
 
         }
     }
