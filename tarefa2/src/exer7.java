@@ -22,9 +22,7 @@ public class exer7 {
             System.out.println(inverno());
         }
     }
-    public static String verao(){
-        return "É verão, época de comer churrasco e ir para a praia";
-    }
+    public static String verao(){return "É verão, época de comer churrasco e ir para a praia";}
     public static String outono(){
         return "É outono, época do halloween";
     }
@@ -34,5 +32,4 @@ public class exer7 {
     public static String inverno(){
         return "É inverno, época dos ursos hibernarem";
     }
-
 }

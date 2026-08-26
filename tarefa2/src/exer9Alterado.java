@@ -1,8 +1,6 @@
 import java.util.Scanner;
-/*Faça um método booleano que retorne true se o número passado como parâmetro
-seja par.
-Retorne false caso seja ímpar.*/
-public class exer9 {
+
+public class exer9Alterado {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -13,9 +11,6 @@ public class exer9 {
     }
     public static boolean determinar (int num)
     {
-        if(num % 2 == 0){
-            return true;
-        }
-            return false;
+        return num %2 ==0;
     }
 }

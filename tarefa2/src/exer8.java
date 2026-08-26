@@ -3,20 +3,19 @@ import java.util.Scanner;
 notas. Retorne a média */
 public class exer8 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
         System.out.println("p1:");
-        int num1;
+        double num1 = input.nextDouble();
         System.out.println("p2:");
-        int num2;
+        double num2 = input.nextDouble();
         System.out.println("p3:");
-        int num3;
+        double num3 = input.nextDouble();
 
-
-
+        System.out.println(caucularMedia(num1, num2, num3));
     }
-        public static int somarnum ( int num1, int num2, int num3){
-        double soma = num1 + num2 + num3;
-        return soma;
+        public static double caucularMedia ( double num1, double num2, double num3){
+        return (num1 + num2 + num3)/3;
 
         }
     }
