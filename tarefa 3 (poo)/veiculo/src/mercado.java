@@ -13,8 +13,8 @@ Atribua valores a esses objetos e mostre suas informações*/
 
 public class mercado {
     String nome;
-    String numeroDasMacasVendidasNoAno;
-    String precoDeVendasDasMacas;
-    String numeroDasLaranjaVendidasNoAno;
-    String precoDeVendasDasLaranjas;
+    int numeroDasMacasVendidasNoAno;
+    double precoDeVendasDasMacas;
+    int numeroDasLaranjaVendidasNoAno;
+    double precoDeVendasDasLaranjas;
 }

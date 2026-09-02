@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class ClassePrincipal {
+public class ClasseVeiculo {
     public static void main(String[] args) {
         veiculo v1 = new veiculo();
         v1.marca = "honda";
