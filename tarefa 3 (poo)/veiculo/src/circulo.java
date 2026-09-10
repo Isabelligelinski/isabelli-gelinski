@@ -3,5 +3,9 @@ Calcule a área de 4 objetos diferentes de Circulo
 Para obter o valor de PI, use a função Math.PI do Java*/
 
 public class circulo {
-        
+    double raio;
+
+    public double calcularArea(){
+        return Math.PI*Math.pow(raio,2);
+    }
 }

@@ -17,4 +17,6 @@ public class mercado {
     double precoDeVendasDasMacas;
     int numeroDasLaranjaVendidasNoAno;
     double precoDeVendasDasLaranjas;
+
+
 }
