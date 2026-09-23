@@ -24,14 +24,16 @@ public class contribuinte {
     private String CPF;
     private String UF;
     private double rendaAnual;
-    double aliquota 
+    double aliquota;
+
+
 
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
      if(nome == null || nome.isBlank()){
-         System.out.println("erro,insira um nome");
+         throw new IllegalArgumentException("erro,insira um nome");
      }else {
          this.nome = nome;
      }
@@ -43,7 +45,7 @@ public class contribuinte {
     }
     public void setCPF(String CPF) {
         if (CPF == null || CPF.isBlank() || CPF.length()!=11){
-            System.out.println("erro,CPF invalido");
+            throw new IllegalArgumentException("erro,CPF invalido");
         }else {
             this.CPF = CPF;
         }
@@ -54,8 +56,8 @@ public class contribuinte {
         return UF;
     }
     public void setUF(String UF) {
-     if(UF == null || UF.isBlank()){
-         System.out.println("erro,UF invalido");
+     if(UF == null || UF.isBlank() || UF.length() !=2){
+         throw new IllegalArgumentException("erro,UF invalido");
      }
         this.UF = UF;
     }
@@ -65,23 +67,36 @@ public class contribuinte {
         return rendaAnual;
     }
     public void setRendaAnual(double rendaAnual) {
+       if(rendaAnual<0){
+           throw new IllegalArgumentException("erro,valor invalido");
+       }
         this.rendaAnual = rendaAnual;
     }
 
 
-    public double calculaImposto(){
-        if(rendaAnual >=0 || rendaAnual <= 4000){
-            aliquota = 0;
-        } else if (rendaAnual >= 4001 || rendaAnual <= 9000) {
-            aliquota = 0.058;
-        } else if (rendaAnual >=9001 || rendaAnual <= 25000) {
-            aliquota = 0.15;
-        } else if (rendaAnual >=25001 || rendaAnual <= 35000) {
-            aliquota = 0.27;
+    public contribuinte(String nome, String CPF, String UF, double rendaAnual) {
+        setNome(nome);
+        setCPF(CPF);
+        setUF(UF);
+        setRendaAnual(rendaAnual);
+
+    }
+
+    public double calcularImposto(){
+        return rendaAnual*calcularAliquota();
+    }
+    public double calcularAliquota(){
+        if(rendaAnual <= 4000){
+            return 0;
+        } else if ( rendaAnual <= 9000) {
+            return rendaAnual * 0.058;
+        } else if ( rendaAnual <= 25000) {
+            return rendaAnual * 0.15;
+        } else if (rendaAnual <= 35000) {
+            return rendaAnual * 0.275;
         }else {
-            aliquota = 0.30;
+            return 0.3;
         }
-    return rendaAnual*aliquota;
     }
 
 }
