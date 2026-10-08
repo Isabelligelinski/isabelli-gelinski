@@ -1,4 +1,5 @@
-public class exe2_veiculo {
+//exer2
+public class veiculo {
 
     private String marca;
     private String modelo;
@@ -6,7 +7,7 @@ public class exe2_veiculo {
     private int ano;
     private double preco;
 
-    public exe2_veiculo(String marca, String modelo, String placa, int ano, double preco) {
+    public veiculo(String marca, String modelo, String placa, int ano, double preco) {
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
