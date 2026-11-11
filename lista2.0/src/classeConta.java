@@ -35,9 +35,4 @@ public class classeConta {
     public void adicionarconta(conta c) {contas.add(c);}
 }
 
-public conta sacar (double saldo){
 
-     if (saldo<sacar){
-        System.out.println();
-    }
-}

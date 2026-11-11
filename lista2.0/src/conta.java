@@ -27,6 +27,7 @@ public class conta {
         this.saldo = saldo;
     }
 
+
     public String getNomeTitular() {
         return nomeTitular;
     }
